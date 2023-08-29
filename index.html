@@ -11,7 +11,8 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const url = urlParams.get('url');
-    const link = btoa(url);
+    // decode base64
+    const link = atob(url);
 
     window.location.href = link;
   </script>
